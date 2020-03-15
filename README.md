@@ -1,5 +1,14 @@
 个人用Loon远程脚本配置
 
+崩坏3改服
+
+```
+# 自定义服务器列表
+http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iCirno/myLoon/master/Loon/bh3_region_list.js
+# 改写连入服务器的客户端标识
+http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/iCirno/myLoon/master/Loon/bh3_vid_rewrite.js
+```
+
 人人影视
 
 ```
